@@ -45,6 +45,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install uv
+          uv venv
           uv pip install -e .
 
       # Generate and deploy the documentation
