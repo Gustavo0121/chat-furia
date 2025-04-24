@@ -1,6 +1,10 @@
+"""Main module."""
+
+
 def main():
-    print("Hello from chat-furia!")
+    """Main."""
+    print('Hello from chat-furia!')  # noqa: T201
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
