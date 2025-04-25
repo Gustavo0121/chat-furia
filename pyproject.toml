@@ -192,6 +192,11 @@ select = [
 
 # Never enforce `E501` (line length violations).
 ignore = [
+  "RUF012",
+  "BLE001",
+  "TRY003",
+  "EM101",
+  "T201",
   "PLR0913",
   "INP001",
   "CPY001",

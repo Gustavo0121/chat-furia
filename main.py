@@ -3,7 +3,7 @@
 
 def main():
     """Main."""
-    print('Hello from chat-furia!')  # noqa: T201
+    print('Hello from chat-furia!')
 
 
 if __name__ == '__main__':
