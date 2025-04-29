@@ -122,7 +122,7 @@ wheels = [
 
 [[package]]
 name = "chat-furia"
-version = "0.2.0a4"
+version = "0.2.0a5"
 source = { virtual = "." }
 dependencies = [
     { name = "channels" },
