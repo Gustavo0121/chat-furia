@@ -5,10 +5,15 @@ description = "Challenge #1 Experiência Conversacional FURIA"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
+    "channels>=4.2.2",
     "django>=5.2",
+    "django-cors-headers>=4.7.0",
+    "djangorestframework>=3.16.0",
+    "google-generativeai>=0.8.5",
     "mkdocs>=1.6.1",
     "pytest>=8.3.5",
     "pytest-cov>=6.1.1",
+    "python-dotenv>=1.1.0",
     "ruff>=0.11.6",
     "taskipy>=1.14.1",
 ]
@@ -187,6 +192,11 @@ select = [
 
 # Never enforce `E501` (line length violations).
 ignore = [
+  "RUF012",
+  "BLE001",
+  "TRY003",
+  "EM101",
+  "T201",
   "PLR0913",
   "INP001",
   "CPY001",
