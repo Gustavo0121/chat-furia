@@ -8,6 +8,7 @@ from rest_framework import viewsets
 
 from .models import Message
 from .serializers import MessageSerializer
+from .get_info import get_current_roster, get_upcoming_matches_and_tournaments, get_recent_achievements
 
 load_dotenv()
 
@@ -15,27 +16,21 @@ GEMINI_API_KEY = os.getenv('GEMINI_API')
 
 genai.configure(api_key=GEMINI_API_KEY)
 
-FURIA_INFO = """
+roster = get_current_roster()
+conquistas = get_recent_achievements()
+torneios = get_upcoming_matches_and_tournaments()
+
+
+FURIA_INFO = f"""
 # Informações sobre a FURIA Esports - Time de Counter-Strike
 
 ## Roster Atual (Abril 2025)
-- chelo (Marcelo Cespedes)
-- drop (André Abreu)
-- kscerato (Kaike Cerato)
-- yuurih (Yuri Santos)
-- saffee (Rafael Costa)
-- Técnico: guerri (Nicholas Nogueira)
+{roster}
 
 ## Conquistas Recentes
-- Finalista do IEM Katowice 2025
-- Campeão da BLAST Premier Spring Finals 2024
-- Top 4 no Major de Paris 2023
-- Campeão da ESL Pro League Season 16
+{conquistas}
 
-## Próximas Partidas
-- 28/04/2025: FURIA vs Natus Vincere - ESL Pro League
-- 02/05/2025: FURIA vs Team Liquid - BLAST Premier
-- 10/05/2025: FURIA vs G2 Esports - IEM Dallas Qualifier
+## {torneios}
 
 ## Sobre a Organização
 A FURIA Esports é uma organização brasileira fundada em 2017 por Jaime Pádua e André Akkari. A equipe de CS:GO se tornou uma das mais respeitadas do mundo, representando o Brasil em competições internacionais.
