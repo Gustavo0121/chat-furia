@@ -3,8 +3,8 @@
 from django.apps import AppConfig
 
 
-class ApiConfig(AppConfig):
-    """ApiConfig."""
+class BackendConfig(AppConfig):
+    """BackendConfig."""
 
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'api'
+    name = 'backend'
